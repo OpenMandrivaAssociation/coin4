@@ -5,6 +5,8 @@
 %define lib_name_orig libcoin
 %define _disable_lto %nil
 
+%global __requires_exclude cmake\\(simage|superglu\\)
+
 Name:           coin4
 Version:        4.0.0
 Release:        1
@@ -89,15 +91,14 @@ rm -rf include/boost
 mkdir build-%{_arch}
 pushd build-%{_arch}
 cmake -DCOIN_BUILD_DOCUMENTATION=TRUE \
-       -DCOIN_THREADSAFE=ON \
        -DCMAKE_INSTALL_PREFIX:PATH=%{_prefix} \
        -DCMAKE_INSTALL_LIBDIR:PATH=%{_lib} \
+       -DCOIN_THREADSAFE=ON \
        -DCOIN_BUILD_DOCUMENTATION_MAN=TRUE \
        -DCOIN_BUILD_TESTS=FALSE \
        -DHAVE_MULTIPLE_VERSION=TRUE \
        -DUSE_EXTERNAL_EXPAT=TRUE ..
 
-#make %{?_smp_mflags} LIBS="-ldl -lx11"
 %make_build
 popd
 
