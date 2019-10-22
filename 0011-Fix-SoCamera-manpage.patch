@@ -1,0 +1,25 @@
+From f59581a2649cf6101d57ec493b99e821d2295b7a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Ralf=20Cors=C3=A9pius?= <corsepiu@corsepiu.home>
+Date: Fri, 20 Feb 2015 17:39:08 +0100
+Subject: [PATCH 12/12] Fix SoCamera manpage.
+
+---
+ src/nodes/SoCamera.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/nodes/SoCamera.cpp b/src/nodes/SoCamera.cpp
+index 8aabbb7..eba897d 100644
+--- a/src/nodes/SoCamera.cpp
++++ b/src/nodes/SoCamera.cpp
+@@ -702,7 +702,7 @@ SoCamera::handleEvent(SoHandleEventAction * action)
+ }
+ 
+ /*!
+-  "Jitter" the camera according to the current rendering pass (\a
++  \"Jitter\" the camera according to the current rendering pass (\a
+   curpass), to get an antialiased rendering of the scene when doing
+   multipass rendering.
+ */
+-- 
+2.1.0
+
