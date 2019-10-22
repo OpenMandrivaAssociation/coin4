@@ -54,6 +54,7 @@ Group:		Development/C++
 Requires:	%{libname} = %{version}
 Provides:	%{name}-devel = %{version}-%{release}
 Provides:	cmake(coin)
+Provides:	cmake(Coin)
 Provides:	cmake(coin4)
 
 %description -n %{libnamedev}
