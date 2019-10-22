@@ -53,6 +53,8 @@ Summary:	Headers for developing programs that will use Coin
 Group:		Development/C++
 Requires:	%{libname} = %{version}
 Provides:	%{name}-devel = %{version}-%{release}
+Provides:	cmake(coin)
+Provides:	cmake(coin4)
 
 %description -n %{libnamedev}
 This package contains the headers that programmers will need to develop
